@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator_Object</title>
+</head>
+<body>
+
+</body>
+<script>
+
+const formula = {
+
+  add: function (num1, num2) {
+    return num1 + num2;
+  },
+  minus: function (num1, num2) {
+    return num1 - num2;
+  },
+  times: function (num1, num2) {
+    return num1 * num2;
+  },
+  divide: function (num1, num2) {
+
+    try {
+      if (num2 === 0) {
+        throw new Error("Cannot divide by zero");
+      }
+      return num1 / num2;
+
+    } catch (error) {
+      console.error(error.message);
+    }
+  },
+};
+
+console.log("Addition: " + formula.add(20, 3));
+console.log("Subtraction: " + formula.minus(10, 5));
+console.log("Multiplication: " + formula.times(5, 3));
+formula.divide(5, 0);
+
+</script>
+</html>
